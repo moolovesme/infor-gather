@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_attach"
+        android:icon="@drawable/ic_action_add_photo_lite"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menulbl_attachitem">
+        <menu>
+            <item
+                android:id="@+id/menu_camera"
+                android:icon="@drawable/ic_action_camera_lite"
+                android:title="@string/menulbl_camera"/>
+            <item
+                android:id="@+id/menu_gallery"
+                android:icon="@drawable/ic_action_folder_lite"
+                android:title="@string/menulbl_gallery"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_location"
+        android:icon="@drawable/ic_action_location_lite"
+        android:orderInCategory="200"
+        android:showAsAction="always"
+        android:title="@string/menulbl_locationpicker"/>
+    <item
+        android:id="@+id/menu_proceed"
+        android:icon="@drawable/ic_action_proceed_lite"
+        android:orderInCategory="300"
+        android:showAsAction="always"
+        android:title="@string/menulbl_proceed"/>
+
+</menu>

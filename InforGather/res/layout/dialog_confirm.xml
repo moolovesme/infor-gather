@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_theme_dialog_bg"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_margin="16dip"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_margin="5dip"
+            android:layout_weight="50"
+            android:text="@string/proceed"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/app_theme_light_gray" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_margin="5dip"
+            android:layout_weight="50"
+            android:text="@string/cancel"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/app_theme_light_gray" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100" >
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="3dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="9dip"
+                android:lines="5"
+                android:singleLine="false"
+                android:text="@string/confirmation_message"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/app_theme_light_gray" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/message"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="3dip"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/app_theme_light_gray" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/cloud_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email"
+                android:layout_marginBottom="3dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="3dip"
+                android:text="@string/cloud_message"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/app_theme_light_gray" />
+
+            <CheckBox
+                android:id="@+id/chk0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cloud_msg"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:text="@string/gdrive"
+                android:textColor="@color/app_theme_light_gray" />
+
+            <CheckBox
+                android:id="@+id/chk1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chk0"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:text="@string/dropbox"
+                android:textColor="@color/app_theme_light_gray" />
+
+            <LinearLayout
+                android:id="@+id/days_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chk1"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="3dip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="3dip"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="50dip"
+                    android:layout_margin="5dip"
+                    android:layout_weight="75"
+                    android:text="@string/days_message"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/app_theme_light_gray" />
+                
+                <Spinner
+			        android:id="@+id/spinnerdays"
+			        android:layout_width="0dip"
+                    android:layout_height="50dip"
+                    android:layout_margin="5dip"
+                    android:layout_weight="25"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+			        android:textColor="@color/app_theme_light_gray" />
+
+                <EditText
+                    android:id="@+id/days"
+                    android:layout_width="0dip"
+                    android:layout_height="50dip"
+                    android:layout_margin="5dip"
+                    android:layout_weight="25"
+                    android:hint="@string/days"
+                    android:inputType="numberSigned"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/app_theme_light_gray"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/chk2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/days_container"
+                android:layout_marginTop="8dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:text="@string/deleteafterbackup"
+                android:textColor="@color/app_theme_light_gray" />
+
+            <Button
+                android:id="@+id/gdriveconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/chk0"
+                android:layout_alignBottom="@+id/chk0"
+                android:layout_toRightOf="@+id/chk0"
+                android:text="@string/connect"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/app_theme_light_gray"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/dropboxconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/chk1"
+                android:layout_alignBottom="@+id/chk1"
+                android:layout_toRightOf="@+id/chk1"
+                android:text="@string/connect"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/app_theme_light_gray"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

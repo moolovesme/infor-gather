@@ -1,0 +1,143 @@
+# view res/layout/activity_offer_view.xml #generated:361
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view res/layout/drawer_main.xml #generated:1
+# view res/layout/drawer_main_merchant.xml #generated:1
+-keep class android.support.v4.widget.DrawerLayout { <init>(...); }
+
+# view res/layout/abs__screen_action_bar.xml #generated:43
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:26
+# view res/layout/abs__screen_simple.xml #generated:32
+# view res/layout/abs__screen_simple_overlay_action_mode.xml #generated:27
+# view xlarge\res/layout-xlarge/abs__screen_action_bar.xml #generated:43
+# view xlarge\res/layout-xlarge/abs__screen_action_bar_overlay.xml #generated:24
+-keep class com.actionbarsherlock.internal.nineoldandroids.widget.NineFrameLayout { <init>(...); }
+
+# view large\res/layout-large/abs__action_mode_close_item.xml #generated:17
+# view res/layout/abs__action_mode_close_item.xml #generated:17
+-keep class com.actionbarsherlock.internal.nineoldandroids.widget.NineLinearLayout { <init>(...); }
+
+# view res/layout/abs__action_menu_item_layout.xml #generated:17
+-keep class com.actionbarsherlock.internal.view.menu.ActionMenuItemView { <init>(...); }
+
+# view res/layout/abs__action_menu_layout.xml #generated:17
+-keep class com.actionbarsherlock.internal.view.menu.ActionMenuView { <init>(...); }
+
+# view res/layout/abs__list_menu_item_layout.xml #generated:17
+# view res/layout/abs__popup_menu_item_layout.xml #generated:17
+-keep class com.actionbarsherlock.internal.view.menu.ListMenuItemView { <init>(...); }
+
+# view res/layout/abs__screen_action_bar.xml #generated:26
+# view res/layout/abs__screen_action_bar.xml #generated:50
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:29
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:52
+# view xlarge\res/layout-xlarge/abs__screen_action_bar.xml #generated:26
+# view xlarge\res/layout-xlarge/abs__screen_action_bar_overlay.xml #generated:27
+-keep class com.actionbarsherlock.internal.widget.ActionBarContainer { <init>(...); }
+
+# view res/layout/abs__action_mode_bar.xml #generated:19
+# view res/layout/abs__screen_action_bar.xml #generated:36
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:40
+# view xlarge\res/layout-xlarge/abs__screen_action_bar.xml #generated:36
+# view xlarge\res/layout-xlarge/abs__screen_action_bar_overlay.xml #generated:37
+-keep class com.actionbarsherlock.internal.widget.ActionBarContextView { <init>(...); }
+
+# view res/layout/abs__screen_action_bar.xml #generated:31
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:35
+# view xlarge\res/layout-xlarge/abs__screen_action_bar.xml #generated:31
+# view xlarge\res/layout-xlarge/abs__screen_action_bar_overlay.xml #generated:32
+-keep class com.actionbarsherlock.internal.widget.ActionBarView { <init>(...); }
+
+# view res/layout/abs__action_bar_home.xml #generated:17
+-keep class com.actionbarsherlock.internal.widget.ActionBarView$HomeView { <init>(...); }
+
+# view res/layout/abs__action_menu_item_layout.xml #generated:40
+-keep class com.actionbarsherlock.internal.widget.CapitalizingButton { <init>(...); }
+
+# view res/layout/abs__dialog_title_holo.xml #generated:23
+-keep class com.actionbarsherlock.internal.widget.FakeDialogPhoneWindow { <init>(...); }
+
+# view res/layout/abs__action_bar_tab_bar_view.xml #generated:3
+# view res/layout/abs__activity_chooser_view.xml #generated:19
+-keep class com.actionbarsherlock.internal.widget.IcsLinearLayout { <init>(...); }
+
+# view res/layout/abs__action_bar_tab.xml #generated:3
+-keep class com.actionbarsherlock.internal.widget.ScrollingTabContainerView$TabView { <init>(...); }
+
+# view res/layout/abs__search_view.xml #generated:84
+-keep class com.actionbarsherlock.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# view AndroidManifest.xml #generated:115
+-keep class com.dabeshackers.infor.gather.AboutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:105
+-keep class com.dabeshackers.infor.gather.EditUserActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:71
+-keep class com.dabeshackers.infor.gather.InitActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:110
+-keep class com.dabeshackers.infor.gather.LocationPicker { <init>(...); }
+
+# view AndroidManifest.xml #generated:79
+-keep class com.dabeshackers.infor.gather.LoginScreen { <init>(...); }
+
+# view AndroidManifest.xml #generated:85
+-keep class com.dabeshackers.infor.gather.LokalHomeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:95
+-keep class com.dabeshackers.infor.gather.NewOfferActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:90
+-keep class com.dabeshackers.infor.gather.OffersListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:120
+-keep class com.dabeshackers.infor.gather.PreferencesActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:100
+-keep class com.dabeshackers.infor.gather.ViewOfferActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:50
+-keep class com.dabeshackers.infor.gather.application.AppMain { <init>(...); }
+
+# view AndroidManifest.xml #generated:126
+-keep class com.dabeshackers.infor.gather.gcm.receivers.GcmBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:137
+-keep class com.dabeshackers.infor.gather.gcm.services.GcmIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:66
+-keep class com.dabeshackers.infor.gather.sync.contentproviders.StubProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:139
+-keep class com.dabeshackers.infor.gather.sync.services.RecordsSyncService { <init>(...); }
+
+# view res/layout/activity_locationpicker.xml #generated:24
+-keep class com.google.android.gms.maps.SupportMapFragment { <init>(...); }
+
+# view res/layout/activity_offer_view.xml #generated:186
+-keep class com.google.android.youtube.player.YouTubePlayerView { <init>(...); }
+
+# view res/layout/text_bubble.xml #generated:8
+-keep class com.google.maps.android.ui.RotationLayout { <init>(...); }
+
+# view ldpi\res/layout-ldpi/capture.xml #generated:25
+# view res/layout/capture.xml #generated:25
+-keep class com.google.zxing.client.android.ViewfinderView { <init>(...); }
+
+# view res/layout/search_book_contents_list_item.xml #generated:17
+-keep class com.google.zxing.client.android.book.SearchBookContentsListItem { <init>(...); }
+
+# view res/layout/activity_offer_add.xml #generated:487
+-keep class com.kpbird.chipsedittextlibrary.ChipsMultiAutoCompleteTextview { <init>(...); }
+
+# view res/layout/activity_offers_list.xml #generated:14
+-keep class com.markupartist.android.widget.PullToRefreshListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:152
+-keep class org.acra.CrashReportDialog { <init>(...); }
+
+# view res/layout/activity_offer_add.xml #generated:81
+# view res/layout/activity_offer_view.xml #generated:380
+-keep class us.feras.ecogallery.EcoGallery { <init>(...); }
+

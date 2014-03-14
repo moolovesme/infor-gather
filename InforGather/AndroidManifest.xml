@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dabeshackers.infor.gather"
+    android:versionCode="1"
+    android:versionName="BETA 0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+
+    <permission
+        android:name="com.example.mapdemo.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.mapdemo.permission.MAPS_RECEIVE" />
+
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <!-- End of copy. -->
+
+    <permission
+        android:name="com.dabeshackers.infor.gather.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.dabeshackers.infor.gather.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="com.dabeshackers.infor.gather.application.AppMain"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:logo="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Inforgather" >
+        
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBNj-ADGMC3UPgrv-yV3nvsh2gUYYWsi7M" /> 
+          
+		<meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        
+        <provider
+            android:name="com.dabeshackers.infor.gather.sync.contentproviders.StubProvider"
+            android:authorities="com.dabeshackers.infor.gather.provider"
+            android:syncable="true" />
+
+        <activity
+            android:name="com.dabeshackers.infor.gather.InitActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dabeshackers.infor.gather.LoginScreen"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Log In"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dabeshackers.infor.gather.LokalHomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Lokal" >
+        </activity>
+        <activity
+            android:name="com.dabeshackers.infor.gather.OffersListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Offers" >
+        </activity>
+        <activity
+            android:name="com.dabeshackers.infor.gather.NewOfferActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="New Offer" >
+        </activity>
+        <activity
+            android:name="com.dabeshackers.infor.gather.ViewOfferActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Offer Details" >
+        </activity>
+        <activity
+            android:name="com.dabeshackers.infor.gather.EditUserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Edit Profile" >
+        </activity>
+        <activity
+            android:name="com.dabeshackers.infor.gather.LocationPicker"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Location Picker" >
+        </activity> 
+        <activity
+            android:name="com.dabeshackers.infor.gather.AboutActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.dabeshackers.infor.gather.PreferencesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+
+        <!-- Receivers Declaration -->
+        <receiver
+            android:name="com.dabeshackers.infor.gather.gcm.receivers.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.dabeshackers.infor.gather" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Services Declaration -->
+        <service android:name="com.dabeshackers.infor.gather.gcm.services.GcmIntentService" >
+        </service>
+        <service
+            android:name="com.dabeshackers.infor.gather.sync.services.RecordsSyncService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter" />
+        </service>
+
+        <!-- ACRA -->
+        <activity
+            android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog" />
+
+
+    </application>
+
+</manifest>

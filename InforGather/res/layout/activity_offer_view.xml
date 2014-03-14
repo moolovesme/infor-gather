@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <!-- Header Starts -->
+        <!-- Header Ends -->
+
+
+        <!-- Footer Start -->
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/options"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:background="@drawable/app_theme_top_border"
+                android:gravity="right|center_vertical" >
+
+                <ImageButton
+                    android:id="@+id/share"
+                    android:layout_width="70dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/app_theme_transparent_button"
+                    android:src="@drawable/ic_share_0padding_lblue" />
+
+                <ImageButton
+                    android:id="@+id/navigate"
+                    android:layout_width="70dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/app_theme_transparent_button"
+                    android:src="@drawable/ic_navigate_0padding_lblue" />
+
+                <Button
+                    android:id="@+id/modify"
+                    android:layout_width="50dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/app_theme_transparent_button"
+                    android:drawableLeft="@drawable/ic_modify_blue"
+                    android:gravity="top"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/discard"
+                    android:layout_width="50dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/app_theme_transparent_button"
+                    android:drawableLeft="@drawable/ic_discard_blue"
+                    android:gravity="top"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/view"
+                    android:layout_width="50dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/app_theme_transparent_button"
+                    android:drawableLeft="@drawable/ic_action_about_blue"
+                    android:gravity="top"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Footer Ends -->
+
+
+        <!-- Login Form -->
+
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer"
+            android:layout_below="@+id/header" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <FrameLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fillViewport="true"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="15dip"
+                            android:paddingRight="15dip"
+                            android:paddingTop="10dip" >
+
+                            <!-- Link to Registration Screen -->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:text="Haircut Back-to-school promo"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/med_gray" />
+
+                                <TextView
+                                    android:id="@+id/merchant"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dip"
+                                    android:gravity="left"
+                                    android:text="By: Reyes Haircutters"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/app_theme_label_color" />
+
+                                <TextView
+                                    android:id="@+id/description"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dip"
+                                    android:gravity="left"
+                                    android:text="@string/confirmation_message"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/dark_gray" />
+
+                                <TextView
+                                    android:id="@+id/price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dip"
+                                    android:gravity="left"
+                                    android:text="Specs"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/dark_gray" />
+
+                                <TextView
+                                    android:id="@+id/expiration"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dip"
+                                    android:gravity="left"
+                                    android:text="Specs"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/dark_gray" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone" >
+
+                        <com.google.android.youtube.player.YouTubePlayerView
+                            android:id="@+id/youtube_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/tab3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fillViewport="true"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="15dip"
+                            android:paddingRight="15dip"
+                            android:paddingTop="10dip" >
+
+                            <!-- Link to Registration Screen -->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dip"
+                                    android:layout_marginBottom="6dip"
+                                    android:orientation="horizontal" >
+
+                                    <ImageView
+                                        android:layout_width="25dip"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="5dip"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/ic_www" />
+
+                                    <TextView
+                                        android:id="@+id/biz_url"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autoLink="web"
+                                        android:gravity="left"
+                                        android:text="http://mybiz.com"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/med_gray" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dip"
+                                    android:layout_marginBottom="6dip"
+                                    android:orientation="horizontal" >
+
+                                    <ImageView
+                                        android:layout_width="25dip"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="5dip"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/ic_fb" />
+
+                                    <TextView
+                                        android:id="@+id/fb_url"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autoLink="web"
+                                        android:gravity="left"
+                                        android:text="http://facebook.com/mybiz"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/med_gray" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dip"
+                                    android:layout_marginBottom="6dip"
+                                    android:orientation="horizontal" >
+
+                                    <ImageView
+                                        android:layout_width="25dip"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="5dip"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/ic_gp" />
+
+                                    <TextView
+                                        android:id="@+id/gplus_url"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autoLink="web"
+                                        android:gravity="left"
+                                        android:text="http://plus.google.com/mybiz"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/med_gray" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dip"
+                                    android:layout_marginBottom="6dip"
+                                    android:orientation="horizontal" >
+
+                                    <ImageView
+                                        android:layout_width="25dip"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="5dip"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/ic_twitter" />
+
+                                    <TextView
+                                        android:id="@+id/twtr_url"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autoLink="web"
+                                        android:gravity="left"
+                                        android:text="http://twitter.com/mybiz"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/med_gray" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dip"
+                                    android:layout_marginBottom="6dip"
+                                    android:orientation="horizontal" >
+
+                                    <ImageView
+                                        android:layout_width="25dip"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="5dip"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/ic_line" />
+
+                                    <TextView
+                                        android:id="@+id/landline"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autoLink="phone"
+                                        android:gravity="left"
+                                        android:text="029991234"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/med_gray" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dip"
+                                    android:layout_marginBottom="6dip"
+                                    android:orientation="horizontal" >
+
+                                    <ImageView
+                                        android:layout_width="25dip"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="5dip"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/ic_mobile" />
+
+                                    <TextView
+                                        android:id="@+id/mobile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:autoLink="phone"
+                                        android:gravity="left"
+                                        android:text="09229991234"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/med_gray" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </ScrollView>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <android.support.v4.view.ViewPager
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </TabHost>
+
+        <!-- Login Form Ends -->
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical" >
+
+            <us.feras.ecogallery.EcoGallery
+                android:id="@+id/images"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_image"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Infor Gather</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="about_text">About Infor Gather</string>
+    <string name="copyright">© 2014 Infor Gather. All rights reserved.</string>
+    
+    <string name="drawer_open">Drawer Opened</string>
+    <string name="drawer_close">Drawer Closed</string>
+    
+    <string name="activity_hint">What\'s up?</string>
+    <string name="search_hint">Search Offers</string>
+    <string name="search_place">Search Places</string>
+        
+    <string name="confirmation_message">This will back-up the selected conversations by sending an email to the following address and/or a .txt file to the cloud drive(s) highlighted below.</string>
+    <string name="cloud_message">Cloud Storage</string>
+    <string name="days_message">Messages will be deleted older than the days indicated on the right.</string>
+    
+    <string name="long_string">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</string>
+    
+    <string name="image">Image</string>
+    <string name="refresh">Refresh</string>
+    <string name="logout">Log Out</string>
+    <string name="add">Add</string>
+    <string name="next">Next</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="select_all">Select All</string>
+    <string name="proceed">Proceed</string>
+    <string name="cancel">Cancel</string>
+    <string name="connect">Connect</string>
+    <string name="email">Email</string>
+    <string name="days">Days</string>
+    <string name="gdrive">Google Drive</string>
+    <string name="dropbox">Dropbox</string>
+    <string name="email_summary">Define the default email address</string>
+    <string name="email_dialog">Provide the Email address to be used</string>
+    <string name="email_default">user@example.com</string>
+    <string name="use_google_drive">Use Google Drive</string>
+    <string name="google_drive_summary">Check to include Google Drive cloud storage by default.</string>
+    <string name="use_dropbox">Use Dropbox</string>
+    <string name="dropbox_summary">Check to include Dropbox cloud storage by default.</string>
+    <string name="days_summary">Define the default age of messages (in days) for deletion</string>
+    <string name="days_dialog">Provide the default age of messages (in days) to be deleted</string>
+    <string name="days_default">30</string>
+    <string name="deleteafterbackup">Delete messages after backup</string>
+    <string name="deleteafterbackup_summary">Set delete after backup as default</string>
+    
+    <!-- ACRA Strings -->
+    <string name="crash_dialog_title">The application has crashed</string>
+    <string name="crash_dialog_text">An unexpected error occurred forcing the
+    application to stop. Please help us fixing this by sending us the error data,
+    all you have to do is click OK.</string>
+    <string name="crash_dialog_comment_prompt">You might want to add your comments about the problem below:</string>
+    <string name="crash_dialog_ok_toast">We\'ll be on it. Thank you!</string>
+    <string name="crash_toast_string">Ooooops ! I crashed, but a report has been prepared to be sent to my developer to help fix the issue !</string>
+    
+    
+    <!-- FTP Strings -->
+    <string name="ftp_host">ftp.codesndbx.com</string> 
+    <string name="ftp_user">android@codesndbx.com</string> 
+    <string name="ftp_pass">android</string> 
+    <string name="ftp_port">21</string>
+    
+    <!-- Email -->
+    <string name="email_user">spotlesssms@gmail.com</string> 
+    <string name="email_password">sp0tl3ssSMS</string>
+    
+    <!-- Dropbox API -->
+    <string name="dropbox_api_key">gye5330erg9g8f0</string> 
+    <string name="dropbox_api_secret">pequn8sw5wjo96r</string>
+    <string name="hint_lookingforsomething">Looking for something?</string>
+    <string name="button_search_text">Search</string>
+    <string name="label_or">or</string>
+    <string name="label_anywhere">Anywhere</string>
+    <string name="label_browse_offers">Browse Offers</string>
+    <string name="label_gotsomethingtoshare">Got something thrilling to share?</string>
+    <string name="label_promotesomething">Post new offer</string>
+    <string name="menulbl_refresh">Refresh</string>
+    <string name="menulbl_settings">Settings</string>
+    <string name="menulbl_help">Help</string>
+    
+    <string name="menulbl_view">View</string>
+    <string name="menulbl_remove">Remove</string>
+    <string name="menulbl_edit">Edit</string>
+    <string name="menulbl_unpublish">Unpublish</string>
+    <string name="menulbl_publish">Publish</string>
+    <string name="menulbl_share">Share</string>
+    
+    <string name="hint_description_edittext">Give more details about your offer</string>
+    <string name="menulbl_attachitem">Attach Item</string>
+    <string name="menulbl_locationpicker">Pick Location</string>
+    <string name="menulbl_proceed">Proceed</string>
+    <string name="hint_price">Price</string>
+    <string name="hint_title">Title</string>
+    <string name="lbl_drawer_merchant">Manage your offers</string>
+    <string name="lbl_drawer_buyer">Search offers</string>
+    <string name="hint_firstname">First Name</string>
+    <string name="hint_lastname">Last Name</string>
+    <string name="label_birthday">Birthday</string>
+    <string name="hint_tradename">e.g. Infor Gather, Inc.</string>
+    <string name="label_address">Address</string>
+    <string name="label_tags">Tags</string>
+    <string name="hint_zipcode">Zip Code</string>
+    <string name="hint_website">Website (e.g. http://mysite.com)</string>
+    <string name="hint_fb_url">Facebook URL (e.g. http://facebook.com/mypage)</string>
+    <string name="hint_tags">Enter Tags (e.g. Food, Health, Fitness, etc.)</string> 
+    
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="hint_bizurl">e.g. http://inforgather.ph</string>
+    <string name="hint_fburl">e.g. http://facebook.com/inforgather.ph</string>
+    <string name="hint_gp_url">e.g. http://plus.google.com/inforgather.ph</string>
+    <string name="hint_twtr_url">e.g. http://twitter.com/inforgather.ph</string>
+    <string name="hint_yt_url">e.g. http://youtube.com/watch?v=abcd1234 or abcd1234</string>
+    <string name="hint_landline">e.g. 02 999 1234</string>
+    <string name="hint_mobile">e.g. 0911 999 1234</string>
+    <string name="label_email">Email</string>
+    <string name="hint_email">someone@example.com</string>
+    <string name="label_tradename">Trade Name</string>
+    <string name="label_website">Website</string>
+    <string name="label_facebook">Facebook URL</string>
+    <string name="label_gplus">Google+</string>
+    <string name="label_twitter">Twitter URL</string>
+    <string name="label_youtube">YouTube URL or Video ID</string>
+    <string name="label_landline">Landline</string>
+    <string name="label_mobile">Mobile</string>
+    <string name="label_publishonsave">Publish on Save</string>
+    <string name="menulbl_camera">Camera</string>
+    <string name="menulbl_gallery">Gallery</string>
+    <string name="label_publishedoffers">My published offers</string>
+    <string name="label_draftoffers">Drafts</string>
+
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="daysOptions">
+        <item name="7">7</item>
+        <item name="30">30</item>
+        <item name="90">90</item>
+        <item name="180">180</item>
+    </string-array>
+    <string-array name="daysOptionsValues">
+        <item name="7">7</item>
+        <item name="30">30</item>
+        <item name="90">90</item>
+        <item name="180">180</item>
+    </string-array>
+     
+</resources>

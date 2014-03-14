@@ -1,0 +1,34 @@
+<resources>
+    <color name="homescreen_bg">#ab2220</color>
+    <color name="red">#ab2220</color>
+    <color name="dark_gray">#1A1A1A</color>
+    <color name="med_gray">#646462</color>
+    <color name="light_gray">#dfdedf</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_blue">#3fb2ff</color>
+    <color name="baby_blue">#57c0f8</color>
+    <color name="black">#000000</color>
+    
+    <color name="facebook_blue">#3B5998</color>
+    <color name="googleplus_red">#d34836</color>
+     
+    <color name="app_theme_bg_blue">#D9F1FF</color>
+    <color name="app_theme_general_bg">#E5E5E5</color>
+    <color name="app_theme_dialog_bg">#292929</color>
+    <color name="app_theme_label_color">#7199BA</color>
+    <color name="app_theme_action_bar">#2B97FF</color>
+    <color name="app_theme_dark_green">#1B9979</color>
+    <color name="app_theme_light_blue1">#3FB2FF</color>
+    <color name="app_theme_light_blue2">#4BAAD3</color>
+    <color name="app_theme_light_gray">#D8D8D8</color>
+    <color name="app_theme_med_gray">#707070</color>
+    <color name="app_theme_dark_gray">#2F2F2F</color>
+    
+    <color name="app_theme_cardui_second_grey">#ff999999</color> 
+    <color name="app_theme_cardui_white">#ffffffff</color> 
+    <color name="app_theme_cardui_shadow">#8c666666</color>
+    
+    
+     
+     
+</resources>

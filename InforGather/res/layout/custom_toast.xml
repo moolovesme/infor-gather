@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_gray" >
+
+    <ImageButton
+        android:id="@+id/img"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_settings_lite" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="The image has been uploaded to server."
+        android:textColor="@color/white" />
+
+</LinearLayout>

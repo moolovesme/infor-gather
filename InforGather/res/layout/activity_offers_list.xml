@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_gray"
+    android:orientation="vertical"
+    android:weightSum="10" >
+
+    <!-- Edittext with clear button -->
+
+
+    <!-- Edittext with clear button -->
+
+    <com.markupartist.android.widget.PullToRefreshListView
+        android:id="@+id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="16dip"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"
+        android:fastScrollEnabled="false"
+        android:smoothScrollbar="false"
+        android:stackFromBottom="false"
+        android:transcriptMode="disabled" />
+
+    <TextView
+        android:id="@+id/android:empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
+        android:layout_marginTop="25dip"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:text="No items found."
+        android:textColor="@color/dark_gray" />
+
+</LinearLayout>

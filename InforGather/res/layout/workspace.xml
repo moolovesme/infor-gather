@@ -1,0 +1,162 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:paddingBottom="10dip"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip"
+    android:paddingTop="10dip" >
+
+    <!-- Link to Registration Screen -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_marginBottom="6dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_www" />
+
+            <TextView
+                android:id="@+id/biz_url"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoLink="web"
+                android:gravity="left"
+                android:text="http://mybiz.com"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/med_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_marginBottom="6dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_fb" />
+
+            <TextView
+                android:id="@+id/fb_url"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoLink="web"
+                android:gravity="left"
+                android:text="http://facebook.com/mybiz"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/med_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_marginBottom="6dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_gp" />
+
+            <TextView
+                android:id="@+id/gplus_url"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoLink="web"
+                android:gravity="left"
+                android:text="http://plus.google.com/mybiz"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/med_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_marginBottom="6dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_twitter" />
+
+            <TextView
+                android:id="@+id/twtr_url"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoLink="web"
+                android:gravity="left"
+                android:text="http://twitter.com/mybiz"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/med_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_marginBottom="6dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_line" />
+
+            <TextView
+                android:id="@+id/landline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoLink="phone"
+                android:gravity="left"
+                android:text="029991234"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/med_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_marginBottom="6dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_mobile" />
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoLink="phone"
+                android:gravity="left"
+                android:text="09229991234"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/med_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

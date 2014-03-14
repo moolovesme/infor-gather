@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_search_item"
+        android:actionLayout="@layout/search_layout"
+        android:icon="@drawable/ic_action_search_lite"
+        android:orderInCategory="100"
+        android:showAsAction="always|collapseActionView"
+        android:title="@string/search_place">
+    </item>
+    <item android:id="@+id/menu_cur_loc"
+        android:title="Current Location"
+        android:orderInCategory="200"
+        android:showAsAction="always" android:icon="@drawable/ic_action_currentloc_lite"/>
+     
+    <item android:id="@+id/menu_ok"
+        android:title="Done"
+        android:orderInCategory="300"
+        android:showAsAction="always" android:icon="@drawable/ic_action_accept_lite"/>
+</menu>

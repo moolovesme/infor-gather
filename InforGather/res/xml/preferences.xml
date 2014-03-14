@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory 
+        android:title="General"
+        android:key="general_prefs">
+
+        <EditTextPreference
+            android:key="general_email"
+            android:title="@string/email" 
+            android:summary="@string/email_summary"
+            android:dialogTitle="@string/email"
+            android:dialogMessage="@string/email_dialog"    
+            android:defaultValue="@string/email_default" />
+        
+        <ListPreference
+            android:key="general_days"
+            android:entries="@array/daysOptions"
+            android:summary="@string/days_summary" 
+            android:entryValues="@array/daysOptionsValues"
+            android:title="@string/days" />
+        
+        <CheckBoxPreference
+            android:key="general_deleteafterbackup"
+            android:summary="@string/deleteafterbackup_summary"
+            android:title="@string/deleteafterbackup"
+            android:defaultValue="true"
+        />
+        
+        
+        
+<!--         <EditTextPreference -->
+<!--             android:key="general_days" -->
+<!--             android:title="@string/days"  -->
+<!--             android:summary="@string/days_summary" -->
+<!--             android:dialogTitle="@string/days" -->
+<!--             android:dialogMessage="@string/days_dialog"     -->
+<!--             android:defaultValue="@string/days_default" /> -->
+        
+    </PreferenceCategory>
+    
+    
+    
+</PreferenceScreen>
