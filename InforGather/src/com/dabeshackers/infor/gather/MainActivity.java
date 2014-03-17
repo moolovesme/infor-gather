@@ -1,9 +1,5 @@
 package com.dabeshackers.infor.gather;
 
-import com.dabeshackers.infor.gather.R;
-import com.dabeshackers.infor.gather.helpers.DeviceAudioHelper;
-import com.dabeshackers.infor.gather.helpers.ToastHelper;
-
 import android.content.Intent;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -15,6 +11,8 @@ import android.widget.ToggleButton;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.dabeshackers.infor.gather.helpers.DeviceAudioHelper;
+import com.dabeshackers.infor.gather.helpers.ToastHelper;
 
 public class MainActivity extends SherlockActivity {
 
@@ -42,13 +40,11 @@ public class MainActivity extends SherlockActivity {
 			}
 		});
 
-
-		if(DeviceAudioHelper.getRingerMode(this) != AudioManager.RINGER_MODE_SILENT){
+		if (DeviceAudioHelper.getRingerMode(this) != AudioManager.RINGER_MODE_SILENT) {
 			toggle.setChecked(false);
-		}else{
+		} else {
 			toggle.setChecked(true);
 		}
-
 
 	}
 
@@ -59,8 +55,6 @@ public class MainActivity extends SherlockActivity {
 		return true;
 	}
 
-
-
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -69,7 +63,7 @@ public class MainActivity extends SherlockActivity {
 
 			return true;
 		case R.id.action_settings:
-			Intent intent = new Intent(MainActivity.this, LokalHomeActivity.class);
+			Intent intent = new Intent(MainActivity.this, MainContainerActivity.class);
 			startActivity(intent);
 			return true;
 		}
@@ -128,6 +122,5 @@ public class MainActivity extends SherlockActivity {
 	//	}
 	//	
 	//	
-
 
 }

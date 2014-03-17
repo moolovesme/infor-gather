@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/light_gray"
     android:orientation="vertical"
     android:weightSum="10" >
 
@@ -33,7 +32,7 @@
         android:layout_marginRight="25dip"
         android:layout_marginTop="25dip"
         android:gravity="center_vertical|center_horizontal|center"
-        android:text="No items found."
+        android:text="No items found"
         android:textColor="@color/dark_gray" />
 
 </LinearLayout>

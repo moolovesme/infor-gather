@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/app_theme_background_repeating_leather" >
+        android:background="@drawable/app_theme_background_repeating_leather_white" >
 
         <!-- Header Starts -->
         <!-- Header Ends -->
@@ -22,7 +22,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginBottom="20dip"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="60dip"
             android:gravity="center_vertical|center_horizontal"
             android:paddingBottom="5dip"
             android:paddingLeft="5dip"
@@ -33,7 +33,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:scaleType="fitCenter"
-                android:src="@drawable/app_logo_alpha" />
+                android:src="@drawable/title_logo" />
         </LinearLayout>
 
         <LinearLayout

@@ -17,13 +17,6 @@ public class Event implements Serializable, Cloneable {
 
 	private static final long serialVersionUID = -3661260023918041604L;
 
-	public static final int OFFER_REGISTRATION_TYPE_FREE = 0;
-	public static final int OFFER_REGISTRATION_TYPE_PAID = 1;
-
-	public static final String OFFER_STATUS_DRAFT = "DRAFT";
-	public static final String OFFER_STATUS_PUBLISHED = "PUBLISHED";
-	public static final String OFFER_STATUS_INACTIVE = "INACTIVE";
-
 	public int currentImageIndex;
 
 	private transient Context context;
@@ -47,18 +40,18 @@ public class Event implements Serializable, Cloneable {
 	private double loc_lng;
 	private double loc_lat;
 
-	private String ref_url;
-
 	private List<String> tagsList;
 	private List<Media> imagesList;
 	private transient List<Bitmap> imagesBitmapList;
+	private List<Attendee> attendees;
+	private List<Schedule> programme;
+	private List<Question> questions;
 
+	private String ref_url;
 	private String youtube_url;
 	private String facebook_url;
 	private String gplus_url;
 	private String twitter_url;
-	private String landline;
-	private String mobile;
 
 	private String edited_by;
 	private long created;
@@ -320,28 +313,84 @@ public class Event implements Serializable, Cloneable {
 		this.twitter_url = twitter_url;
 	}
 
-	public String getLandline() {
-		return landline;
-	}
-
-	public void setLandline(String landline) {
-		this.landline = landline;
-	}
-
-	public String getMobile() {
-		return mobile;
-	}
-
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-
 	public String getStatus() {
 		return status;
 	}
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public String getSubtitle() {
+		return subtitle;
+	}
+
+	public void setSubtitle(String subtitle) {
+		this.subtitle = subtitle;
+	}
+
+	public String getEventmaster() {
+		return eventmaster;
+	}
+
+	public void setEventmaster(String eventmaster) {
+		this.eventmaster = eventmaster;
+	}
+
+	public long getDatefrom() {
+		return datefrom;
+	}
+
+	public void setDatefrom(long datefrom) {
+		this.datefrom = datefrom;
+	}
+
+	public long getDateto() {
+		return dateto;
+	}
+
+	public void setDateto(long dateto) {
+		this.dateto = dateto;
+	}
+
+	public String getTranscript() {
+		return transcript;
+	}
+
+	public void setTranscript(String transcript) {
+		this.transcript = transcript;
+	}
+
+	public String getTag() {
+		return tag;
+	}
+
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
+
+	public List<Attendee> getAttendees() {
+		return attendees;
+	}
+
+	public void setAttendees(List<Attendee> attendees) {
+		this.attendees = attendees;
+	}
+
+	public List<Schedule> getProgramme() {
+		return programme;
+	}
+
+	public void setProgramme(List<Schedule> programme) {
+		this.programme = programme;
+	}
+
+	public List<Question> getQuestions() {
+		return questions;
+	}
+
+	public void setQuestions(List<Question> questions) {
+		this.questions = questions;
 	}
 
 }

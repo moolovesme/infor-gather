@@ -7,34 +7,35 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/app_theme_background_repeating_leather" >
+        android:background="@drawable/app_theme_background_repeating_leather_white" >
 
         <!-- Header Starts -->
         <!-- Header Ends -->
 
 
         <!-- Footer Start -->
-        
+
         <LinearLayout
             android:id="@+id/header"
             android:layout_width="fill_parent"
             android:layout_height="200dip"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="20dip"
             android:layout_marginBottom="20dip"
+            android:layout_marginTop="60dip"
             android:gravity="center_vertical|center_horizontal"
-            android:paddingTop="5dip"
+            android:orientation="vertical"
             android:paddingBottom="5dip"
             android:paddingLeft="5dip"
-            android:paddingRight="5dip" >
+            android:paddingRight="5dip"
+            android:paddingTop="5dip" >
 
             <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/image"
                 android:scaleType="fitCenter"
-                android:src="@drawable/app_logo_alpha" />
-
+                android:src="@drawable/title_logo" />
         </LinearLayout>
 
         <LinearLayout
@@ -44,7 +45,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="50dip"
             android:orientation="vertical" >
-            
+
             <Button
                 android:id="@+id/btnFacebook"
                 android:layout_width="fill_parent"
@@ -53,14 +54,14 @@
                 android:layout_marginLeft="20dip"
                 android:layout_marginRight="20dip"
                 android:layout_marginTop="5dip"
-                android:text="Facebook"
                 android:background="@drawable/facebook_button"
+                android:inputType="textEmailAddress"
                 android:paddingLeft="10dp"
                 android:singleLine="true"
+                android:text="Facebook"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/white"
-                android:inputType="textEmailAddress" />
-            
+                android:textColor="@color/white" />
+
             <Button
                 android:id="@+id/btnGoogle"
                 android:layout_width="fill_parent"
@@ -70,13 +71,12 @@
                 android:layout_marginRight="20dip"
                 android:layout_marginTop="5dip"
                 android:background="@drawable/google_button"
-                android:text="Google"
+                android:inputType="textEmailAddress"
                 android:paddingLeft="10dp"
                 android:singleLine="true"
+                android:text="Google"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/white"
-                android:inputType="textEmailAddress" />
-            
+                android:textColor="@color/white" />
         </LinearLayout>
         <!-- Footer Ends -->
 
@@ -92,10 +92,6 @@
             android:paddingLeft="15dip"
             android:paddingRight="15dip"
             android:paddingTop="10dip" >
-            
-            
-            
-            
 
             <!-- Email Label -->
 
@@ -109,13 +105,13 @@
                 android:layout_marginTop="5dip"
                 android:background="@drawable/app_theme_textbox"
                 android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:paddingLeft="10dp"
-                android:singleLine="true"
                 android:selectAllOnFocus="true"
+                android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/black"
                 android:textColorHint="@color/med_gray"
-                android:inputType="textEmailAddress"
                 android:visibility="gone" />
 
             <!-- Password Label -->
@@ -124,15 +120,15 @@
                 android:id="@+id/txtPass"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
-                android:layout_marginTop="10dip"
                 android:layout_marginLeft="20dip"
                 android:layout_marginRight="20dip"
+                android:layout_marginTop="10dip"
                 android:background="@drawable/app_theme_textbox"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:paddingLeft="10dp"
-                android:singleLine="true"
                 android:selectAllOnFocus="true"
+                android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/black"
                 android:textColorHint="@color/med_gray"
@@ -143,10 +139,10 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="10dip"
-                android:orientation="horizontal"
                 android:layout_marginLeft="20dip"
                 android:layout_marginRight="20dip"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal"
                 android:visibility="gone" >
 
                 <Button
@@ -158,7 +154,7 @@
                     android:text="Sign in problems"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@color/app_theme_label_color" />
-                
+
                 <Button
                     android:id="@+id/btnLogin"
                     android:layout_width="120dip"
@@ -168,10 +164,8 @@
                     android:background="@drawable/app_theme_button"
                     android:clickable="true"
                     android:text="Login"
-                    android:textColor="#FFFFFF"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF" />
             </RelativeLayout>
 
             <!-- Link to Registration Screen -->
@@ -179,7 +173,6 @@
         </LinearLayout>
         <!-- Login Form Ends -->
 
-        
     </RelativeLayout>
 
 </ScrollView>

@@ -9,21 +9,27 @@
         android:title="@string/search">
     </item>
     <item
+        android:id="@+id/menu_add"
+        android:icon="@drawable/ic_action_add_lite"
+        android:orderInCategory="200"
+        android:showAsAction="always"
+        android:title="@string/menulbl_add"/>
+    <item
         android:id="@+id/menu_refresh"
         android:icon="@drawable/ic_action_refresh_lite"
-        android:orderInCategory="200"
+        android:orderInCategory="300"
         android:showAsAction="never"
         android:title="@string/menulbl_refresh"/>
     <item
         android:id="@+id/menu_settings"
         android:icon="@drawable/ic_action_settings_lite"
-        android:orderInCategory="300"
+        android:orderInCategory="400"
         android:showAsAction="never"
         android:title="@string/menulbl_settings"/>
     <item
         android:id="@+id/menu_help"
         android:icon="@drawable/ic_action_help_lite"
-        android:orderInCategory="300"
+        android:orderInCategory="500"
         android:showAsAction="never"
         android:title="@string/menulbl_help"/>
 

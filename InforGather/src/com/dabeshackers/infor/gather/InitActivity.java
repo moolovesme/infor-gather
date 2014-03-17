@@ -1,6 +1,5 @@
 package com.dabeshackers.infor.gather;
 
-
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
@@ -23,12 +22,11 @@ import android.util.Log;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Window;
-import com.dabeshackers.infor.gather.R;
 import com.dabeshackers.infor.gather.application.AppMain;
 import com.dabeshackers.infor.gather.application.ApplicationUtils;
 import com.dabeshackers.infor.gather.entities.User;
 import com.dabeshackers.infor.gather.helpers.NetworkConnectivityHelper;
-import com.dabeshackers.infor.gather.http.LokalWebService;
+import com.dabeshackers.infor.gather.http.ApplicationWebService;
 
 public class InitActivity extends SherlockActivity {
 
@@ -197,7 +195,7 @@ public class InitActivity extends SherlockActivity {
 									try {
 										int tries = 0;
 										int triesLimit = 10;
-										while (!LokalWebService.GCM.pushRegistrationToBackend(InitActivity.this, appMain.getCurrentGCMObject(), appMain.getCurrentUser().getId())) {
+										while (!ApplicationWebService.GCM.pushRegistrationToBackend(InitActivity.this, appMain.getCurrentGCMObject(), appMain.getCurrentUser().getId())) {
 											if (triesLimit >= 10) {
 												Log.i(TAG, "GCM push to back-end failed after several retries. Exiting app.");
 												InitActivity.this.finish();
@@ -293,7 +291,7 @@ public class InitActivity extends SherlockActivity {
 					if (lastLog > 0 && (lastLog + sevenDays) >= new Date().getTime()) {
 						//Make sure to save to GCM table in host
 						try {
-							boolean result = LokalWebService.GCM.pushRegistrationToBackend(InitActivity.this, appMain.getCurrentGCMObject(), userId);
+							boolean result = ApplicationWebService.GCM.pushRegistrationToBackend(InitActivity.this, appMain.getCurrentGCMObject(), userId);
 							Log.i(TAG, "GCMWebService.pushRegistrationToBackend Result:" + result);
 						} catch (UnsupportedEncodingException e) {
 							e.printStackTrace();
@@ -341,8 +339,7 @@ public class InitActivity extends SherlockActivity {
 		int mode = settings.getInt(ApplicationUtils.PREFS_LAST_OPERATION_MODE_USED, 0);
 
 		//Unload this and proceed to home
-		Intent activityIntent = new Intent(getApplicationContext(), LokalHomeActivity.class);
-		activityIntent.putExtra(LokalHomeActivity.OPERATION_MODE, mode);
+		Intent activityIntent = new Intent(getApplicationContext(), MainContainerActivity.class);
 		startActivity(activityIntent);
 		InitActivity.this.finish();
 	}

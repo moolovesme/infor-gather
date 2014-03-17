@@ -29,7 +29,7 @@ import com.dabeshackers.infor.gather.application.AppMain;
 import com.dabeshackers.infor.gather.entities.User;
 import com.dabeshackers.infor.gather.helpers.DateHelper;
 import com.dabeshackers.infor.gather.helpers.LocationHelper;
-import com.dabeshackers.infor.gather.http.LokalWebService;
+import com.dabeshackers.infor.gather.http.ApplicationWebService;
 import com.google.android.gms.maps.model.LatLng;
 
 public class EditUserActivity extends SherlockFragmentActivity {
@@ -224,7 +224,7 @@ public class EditUserActivity extends SherlockFragmentActivity {
 
 					});
 
-				} else if (allowChangeTradeName && !LokalWebService.Users.isTradeNameUnique(EditUserActivity.this, tradeName.getText().toString())) {
+				} else if (allowChangeTradeName && !ApplicationWebService.Users.isTradeNameUnique(EditUserActivity.this, tradeName.getText().toString())) {
 					runOnUiThread(new Runnable() {
 
 						@Override
@@ -266,7 +266,7 @@ public class EditUserActivity extends SherlockFragmentActivity {
 
 					currentUser.setUpdated(Calendar.getInstance().getTimeInMillis());
 
-					if (LokalWebService.Users.pushRecordToBackEnd(EditUserActivity.this, currentUser)) {
+					if (ApplicationWebService.Users.pushRecordToBackEnd(EditUserActivity.this, currentUser)) {
 						setResult(RESULT_OK);
 						finish();
 					} else {

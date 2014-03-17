@@ -53,7 +53,7 @@ import com.dabeshackers.infor.gather.helpers.FileOperationsHelper;
 import com.dabeshackers.infor.gather.helpers.GUIDHelper;
 import com.dabeshackers.infor.gather.helpers.LocationHelper;
 import com.dabeshackers.infor.gather.helpers.MediaCaptureHelper;
-import com.dabeshackers.infor.gather.http.LokalWebService;
+import com.dabeshackers.infor.gather.http.ApplicationWebService;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.api.client.util.Joiner;
 import com.kpbird.chipsedittextlibrary.ChipsAdapter;
@@ -176,7 +176,7 @@ public class NewOfferActivity extends SherlockActivity {
 
 			@Override
 			public void run() {
-				List<String> webTags = LokalWebService.Tags.fetchDistinctRecords(NewOfferActivity.this);
+				List<String> webTags = ApplicationWebService.Tags.fetchDistinctRecords(NewOfferActivity.this);
 				final ArrayList<ChipsItem> presetCategories = new ArrayList<ChipsItem>();
 
 				for (String tag : webTags) {
@@ -392,7 +392,7 @@ public class NewOfferActivity extends SherlockActivity {
 					currentOffer.setEdited_by(currentUser.getId());
 					currentOffer.setUpdated(Calendar.getInstance().getTimeInMillis());
 
-					if (LokalWebService.Offers.pushRecordToBackEnd(NewOfferActivity.this, currentOffer)) {
+					if (ApplicationWebService.Offers.pushRecordToBackEnd(NewOfferActivity.this, currentOffer)) {
 						runOnUiThread(new Runnable() {
 
 							@Override

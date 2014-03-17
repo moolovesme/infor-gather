@@ -4,8 +4,16 @@
     android:layout_height="match_parent" >
 
     <!-- The main content view -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+        
+        
+    </FrameLayout>
 
-    <include layout="@layout/activity_offers_list" />
+    
 
     <!-- The navigation drawer -->
 
@@ -22,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start" >
 
-            <include layout="@layout/activity_lokal_home" />
+            <include layout="@layout/drawer_contents" />
         </RelativeLayout>
     </ScrollView>
 

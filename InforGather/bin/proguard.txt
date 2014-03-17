@@ -2,7 +2,6 @@
 -keep class android.support.v4.view.ViewPager { <init>(...); }
 
 # view res/layout/drawer_main.xml #generated:1
-# view res/layout/drawer_main_merchant.xml #generated:1
 -keep class android.support.v4.widget.DrawerLayout { <init>(...); }
 
 # view res/layout/abs__screen_action_bar.xml #generated:43
@@ -83,7 +82,7 @@
 -keep class com.dabeshackers.infor.gather.LoginScreen { <init>(...); }
 
 # view AndroidManifest.xml #generated:85
--keep class com.dabeshackers.infor.gather.LokalHomeActivity { <init>(...); }
+-keep class com.dabeshackers.infor.gather.MainContainerActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:95
 -keep class com.dabeshackers.infor.gather.NewOfferActivity { <init>(...); }
@@ -131,7 +130,7 @@
 # view res/layout/activity_offer_add.xml #generated:487
 -keep class com.kpbird.chipsedittextlibrary.ChipsMultiAutoCompleteTextview { <init>(...); }
 
-# view res/layout/activity_offers_list.xml #generated:14
+# view res/layout/fragment_events_list.xml #generated:13
 -keep class com.markupartist.android.widget.PullToRefreshListView { <init>(...); }
 
 # view AndroidManifest.xml #generated:152

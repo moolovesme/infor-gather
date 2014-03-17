@@ -1,6 +1,5 @@
 package com.dabeshackers.infor.gather;
 
-
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
@@ -30,7 +29,6 @@ import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.dabeshackers.infor.gather.R;
 import com.dabeshackers.infor.gather.application.AppMain;
 import com.dabeshackers.infor.gather.application.ApplicationUtils;
 import com.dabeshackers.infor.gather.data.DBAdapter;
@@ -38,7 +36,7 @@ import com.dabeshackers.infor.gather.dialogs.ProgressDialogFragment;
 import com.dabeshackers.infor.gather.entities.User;
 import com.dabeshackers.infor.gather.helpers.LoginHelper;
 import com.dabeshackers.infor.gather.helpers.NetworkConnectivityHelper;
-import com.dabeshackers.infor.gather.http.LokalWebService;
+import com.dabeshackers.infor.gather.http.ApplicationWebService;
 
 public class LoginScreen extends SherlockFragmentActivity implements Runnable {
 	private final String TAG = LoginScreen.class.getSimpleName();
@@ -107,7 +105,7 @@ public class LoginScreen extends SherlockFragmentActivity implements Runnable {
 								try {
 									int tries = 0;
 									int triesLimit = 10;
-									while (!LokalWebService.GCM.pushRegistrationToBackend(LoginScreen.this, appMain.getCurrentGCMObject(), appMain.getCurrentUser().getId())) {
+									while (!ApplicationWebService.GCM.pushRegistrationToBackend(LoginScreen.this, appMain.getCurrentGCMObject(), appMain.getCurrentUser().getId())) {
 										if (triesLimit >= 10) {
 											Log.i(TAG, "GCM push to back-end failed after several retries. Exiting app.");
 											LoginScreen.this.finish();
@@ -284,7 +282,7 @@ public class LoginScreen extends SherlockFragmentActivity implements Runnable {
 
 									int tries = 0;
 									int triesLimit = 10;
-									while (!LokalWebService.GCM.pushRegistrationToBackend(LoginScreen.this, appMain.getCurrentGCMObject(), appMain.getCurrentUser().getId())) {
+									while (!ApplicationWebService.GCM.pushRegistrationToBackend(LoginScreen.this, appMain.getCurrentGCMObject(), appMain.getCurrentUser().getId())) {
 										if (triesLimit >= 10) {
 											Log.i(TAG, "GCM push to back-end failed after several retries. Exiting app.");
 											LoginScreen.this.finish();
@@ -490,8 +488,7 @@ public class LoginScreen extends SherlockFragmentActivity implements Runnable {
 		int mode = settings.getInt(ApplicationUtils.PREFS_LAST_OPERATION_MODE_USED, 0);
 
 		//Unload this and proceed to home
-		Intent activityIntent = new Intent(getApplicationContext(), LokalHomeActivity.class);
-		activityIntent.putExtra(LokalHomeActivity.OPERATION_MODE, mode);
+		Intent activityIntent = new Intent(getApplicationContext(), MainContainerActivity.class);
 		startActivity(activityIntent);
 		LoginScreen.this.finish();
 	}
