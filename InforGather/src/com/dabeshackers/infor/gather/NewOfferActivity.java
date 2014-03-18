@@ -1,6 +1,5 @@
 package com.dabeshackers.infor.gather;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -43,7 +42,6 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.dabeshackers.infor.gather.R;
 import com.dabeshackers.infor.gather.application.AppMain;
 import com.dabeshackers.infor.gather.entities.Media;
 import com.dabeshackers.infor.gather.entities.Offer;
@@ -72,7 +70,7 @@ public class NewOfferActivity extends SherlockActivity {
 	private String currentLocationText;
 
 	private static final int LOCATION_PICKER_REQUEST_CODE = 10;
-	public static final int NEW_OFFER_REQUEST_CODE = NewOfferActivity.class.getSimpleName().hashCode();
+	public static final int NEW_OFFER_REQUEST_CODE = 10001;
 
 	private Uri fileUri;
 

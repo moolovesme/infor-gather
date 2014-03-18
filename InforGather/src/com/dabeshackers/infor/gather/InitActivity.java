@@ -34,7 +34,7 @@ public class InitActivity extends SherlockActivity {
 
 	private static final String TAG = InitActivity.class.getSimpleName();
 	private static boolean DEBUG = true;
-	private static int SPLASH_TIME_OUT = 500;
+	private static int SPLASH_TIME_OUT = 3000;
 
 	private AppMain appMain;
 

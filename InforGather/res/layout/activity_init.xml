@@ -49,9 +49,10 @@
                 android:id="@+id/loading"
                 android:layout_width="160dip"
                 android:layout_height="25dip"
+                android:contentDescription="@string/image"
                 android:gravity="center"
                 android:scaleType="centerInside"
-                android:drawable="@drawable/loading"
+                android:drawable="@drawable/loader"
                 android:visibility="gone" />
 
             <TextView

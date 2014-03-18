@@ -542,68 +542,68 @@ public class EventsFragment extends SherlockListFragment {
 						}).start();
 						break;
 
-					case R.id.menu_publish:
-						new Thread(new Runnable() {
-							@Override
-							public void run() {
-								try {
-									item.createSnapShot();
-									Offer snapShot = item.getSnapShot();
-									snapShot.setStatus(Offer.OFFER_STATUS_PUBLISHED);
-									snapShot.setUpdated(Calendar.getInstance().getTimeInMillis());
-									snapShot.setVersion(snapShot.getVersion());
-									if (ApplicationWebService.Offers.updateStatus(activity, snapShot)) {
-										item.setStatus(Offer.OFFER_STATUS_PUBLISHED);
-										item.setUpdated(snapShot.getUpdated());
-										item.setVersion(snapShot.getVersion());
-
-										activity.runOnUiThread(new Runnable() {
-
-											@Override
-											public void run() {
-												AlertDialog.Builder alert = new AlertDialog.Builder(activity);
-												alert.setTitle("Successful");
-												alert.setCancelable(false);
-												alert.setMessage("The offer has been published successfully.");
-												alert.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-													public void onClick(DialogInterface dialog, int which) {
-														items.remove(item);
-														adapter.notifyDataSetChanged();
-														draftsButtonClicked();
-													}
-												});
-												alert.setIcon(android.R.drawable.ic_dialog_info);
-												alert.show();
-											}
-
-										});
-									} else {
-										activity.runOnUiThread(new Runnable() {
-
-											@Override
-											public void run() {
-												AlertDialog.Builder alert = new AlertDialog.Builder(activity);
-												alert.setTitle("Failed");
-												alert.setMessage("Operation failed. Please try again later.");
-												alert.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-													public void onClick(DialogInterface dialog, int which) {
-
-													}
-												});
-												alert.setIcon(android.R.drawable.ic_dialog_alert);
-												alert.show();
-											}
-
-										});
-									}
-								} catch (CloneNotSupportedException e) {
-									e.printStackTrace();
-								}
-
-							}
-						}).start();
-
-						break;
+					//					case R.id.menu_publish:
+					//						new Thread(new Runnable() {
+					//							@Override
+					//							public void run() {
+					//								try {
+					//									item.createSnapShot();
+					//									Offer snapShot = item.getSnapShot();
+					//									snapShot.setStatus(Offer.OFFER_STATUS_PUBLISHED);
+					//									snapShot.setUpdated(Calendar.getInstance().getTimeInMillis());
+					//									snapShot.setVersion(snapShot.getVersion());
+					//									if (ApplicationWebService.Offers.updateStatus(activity, snapShot)) {
+					//										item.setStatus(Offer.OFFER_STATUS_PUBLISHED);
+					//										item.setUpdated(snapShot.getUpdated());
+					//										item.setVersion(snapShot.getVersion());
+					//
+					//										activity.runOnUiThread(new Runnable() {
+					//
+					//											@Override
+					//											public void run() {
+					//												AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+					//												alert.setTitle("Successful");
+					//												alert.setCancelable(false);
+					//												alert.setMessage("The offer has been published successfully.");
+					//												alert.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+					//													public void onClick(DialogInterface dialog, int which) {
+					//														items.remove(item);
+					//														adapter.notifyDataSetChanged();
+					//														draftsButtonClicked();
+					//													}
+					//												});
+					//												alert.setIcon(android.R.drawable.ic_dialog_info);
+					//												alert.show();
+					//											}
+					//
+					//										});
+					//									} else {
+					//										activity.runOnUiThread(new Runnable() {
+					//
+					//											@Override
+					//											public void run() {
+					//												AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+					//												alert.setTitle("Failed");
+					//												alert.setMessage("Operation failed. Please try again later.");
+					//												alert.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+					//													public void onClick(DialogInterface dialog, int which) {
+					//
+					//													}
+					//												});
+					//												alert.setIcon(android.R.drawable.ic_dialog_alert);
+					//												alert.show();
+					//											}
+					//
+					//										});
+					//									}
+					//								} catch (CloneNotSupportedException e) {
+					//									e.printStackTrace();
+					//								}
+					//
+					//							}
+					//						}).start();
+					//
+					//						break;
 
 					case R.id.menu_share:
 						boolean withImage = false;
@@ -827,11 +827,43 @@ public class EventsFragment extends SherlockListFragment {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.menu_add:
-			Intent ActivityIntent = new Intent(activity, NewOfferActivity.class);
-			startActivity(ActivityIntent);
+
+			Intent intent = new Intent(activity, NewOfferActivity.class);
+			intent.putExtra("lat", currentLatLng.latitude);
+			intent.putExtra("lng", currentLatLng.longitude);
+			intent.putExtra("loc_text", currentLocationText);
+			startActivityForResult(intent, NewOfferActivity.NEW_OFFER_REQUEST_CODE);
+			//			startActivity(ActivityIntent);
 			return true;
 		}
 		return true;
+	}
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+
+		if (requestCode == NewOfferActivity.NEW_OFFER_REQUEST_CODE) {
+			if (resultCode == Activity.RESULT_OK) {
+
+				activity.setProgressBarIndeterminateVisibility(Boolean.TRUE);
+				dbCurrentRow = 0;
+				isLoading = true;
+				items.clear();
+				adapter.notifyDataSetChanged();
+
+				// Perform sync then refresh
+				new Thread(new Runnable() {
+
+					public void run() {
+						appMain.requestSync();
+						fillData(FillDataTypeEnum.FILLDATA_REQUERY);
+					}
+
+				}).start();
+			}
+		}
+
 	}
 
 	@Override

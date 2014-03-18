@@ -265,22 +265,34 @@ public class MainContainerActivity extends SherlockFragmentActivity {
 			fragmentManager.beginTransaction().replace(R.id.content_frame, listfragment).commit();
 			break;
 
-		case 1: //Alerts
+		case 1: //Your Events
+			listfragment = new EventsFragment();
+			title = EventsFragment.TITLE;
+			fragmentManager.beginTransaction().replace(R.id.content_frame, listfragment).commit();
+			break;
+
+		case 2: //Subscribed Events
+			listfragment = new EventsFragment();
+			title = EventsFragment.TITLE;
+			fragmentManager.beginTransaction().replace(R.id.content_frame, listfragment).commit();
+			break;
+
+		case 3: //Alerts
 			fragment = new InventoryFragment();
 			title = InventoryFragment.TITLE;
 			fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 			break;
 
-		case 2: //Preferences
+		case 4: //Preferences
 			fragment = new PosFragment();
 			title = PosFragment.TITLE;
 			break;
 
-		case 3: //Help
+		case 5: //Help
 			ToastHelper.toast(MainContainerActivity.this, "Help", Toast.LENGTH_SHORT);
 			break;
 
-		case 4: //Logout
+		case 6: //Logout
 			ToastHelper.toast(MainContainerActivity.this, "Exit", Toast.LENGTH_SHORT);
 			break;
 
@@ -317,7 +329,7 @@ public class MainContainerActivity extends SherlockFragmentActivity {
 			}
 			return true;
 		}
-		return true;
+		return false; //Return false so that the fragments' onOptionsItemSelected() handler inside this activity will be called
 	}
 
 	//	private boolean isNotFirstTime() {
